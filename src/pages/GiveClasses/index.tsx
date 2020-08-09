@@ -1,10 +1,17 @@
 import React from 'react';
 import { View, ImageBackground, Text } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import { RectButton} from 'react-native-gesture-handler';
 import styles from './styles';
 import giveClassesBgImage from '../../assets/images/give-classes-background.png';
 
 function GiveClasses() {
+    const { goBack } = useNavigation();
+
+    function handleNavigateBack(){
+        goBack();
+    }
+
     return (
         <View style={styles.container}>
             <ImageBackground 
@@ -19,7 +26,7 @@ function GiveClasses() {
                     Para começar, você precisa se cadastrar como professor na nossa plataforma web.
                 </Text>
             </ImageBackground>
-            <RectButton style={styles.okayButton} >
+            <RectButton onPress={handleNavigateBack} style={styles.okayButton} >
                 <Text style={styles.okayButtonText}>Tudo bem</Text>
             </RectButton>
         </View>

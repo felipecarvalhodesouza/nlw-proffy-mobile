@@ -31,13 +31,19 @@ const styles = StyleSheet.create({
         maxWidth: 240
     },
 
-    okButton: {
+    okayButton: {
         marginVertical: 40,
         backgroundColor: '#04d361',
         height: 58,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 8
+    },
+
+    okayButtonText: {
+        color: '#FFF',
+        fontSize: 16,
+        fontFamily: 'Archivo_700Bold'
     }
 });
 
